@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #3a4764;
+}
+
+body,
+button,
+input {
+  font: 700 28px Spartan, sans-serif;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .calculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.container .calculator .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  font-size: 26px;
+}
+
+.container .calculator .title span {
+  margin-top: auto;
+}
+
+.container .calculator .toggle-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .calculator .toggle-container span {
+  font-size: 14px;
+  padding-right: 20px;
+  margin-top: auto;
+}
+
+.container .calculator .toggle-container .toggle-btn {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .calculator .toggle-container .toggle-btn span {
+  padding: 0;
+  font-size: 11px;
+  letter-spacing: 7px;
+  padding-left: 8px;
+  margin: 0 auto;
+}
+
+.container .calculator .toggle-container .toggle-btn input[type="checkbox"] {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.container .calculator .toggle-container .toggle-btn label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70px;
+  height: 25px;
+  background: #232c43;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 0 0 20px #477a8550;
+          box-shadow: 0 0 20px #477a8550;
+  z-index: 2;
+}
+
+.container .calculator .toggle-container .toggle-btn label::after {
+  content: "";
+  width: 19px;
+  height: 19px;
+  background-color: #d03f2f;
+  position: absolute;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .calculator .toggle-container .toggle-btn input:checked + label:after {
+  -webkit-transform: translateX(calc(100% + 27px));
+          transform: translateX(calc(100% + 27px));
+}
+
+.container .calculator .input-container {
+  width: 445px;
+  height: 100px;
+  border-radius: 9px;
+  padding: 25px;
+  margin: 20px 0;
+  background: #1a2031;
+  border: 0;
+  outline: 0;
+  color: white;
+  font-size: 38px;
+  text-align: right;
+}
+
+.container .calculator .buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #232c43;
+  padding: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 9px;
+}
+
+.container .calculator .buttons-container .buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [start] 90px [line1] 90px [line2] 90px [line3] 90px [end];
+      grid-template-columns: [start] 90px [line1] 90px [line2] 90px [line3] 90px [end];
+  -ms-grid-rows: [start] 60px [row1] 60px [row2] 60px [row3] 60px [row4] 60px [end];
+      grid-template-rows: [start] 60px [row1] 60px [row2] 60px [row3] 60px [row4] 60px [end];
+  gap: 15px;
+}
+
+.container .calculator .buttons-container .buttons .reset {
+  -ms-grid-column: start;
+      grid-column-start: start;
+  grid-column-end: line2;
+}
+
+.container .calculator .buttons-container .buttons .equal {
+  -ms-grid-column: line2;
+      grid-column-start: line2;
+  grid-column-end: end;
+}
+
+.container .calculator .buttons-container .buttons button {
+  color: #444b5a;
+  background: #fff;
+  border: 0;
+  border-bottom: 3px solid #b4a597;
+  border-radius: 9px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.container .calculator .buttons-container .buttons button:hover {
+  opacity: 0.8;
+}
+
+.container .calculator .buttons-container .buttons .reset,
+.container .calculator .buttons-container .buttons .del {
+  background: #637097;
+  border-color: #404e72;
+  color: #fff;
+  font-size: 18px;
+}
+
+.container .calculator .buttons-container .buttons .equal {
+  background: #d03f2f;
+  border-color: #93261a;
+  color: #fff;
+  font-size: 24px;
+}
+
+.b-active {
+  background: #e6e6e6;
+}
+
+.active .calculator span {
+  color: #35352c;
+}
+
+.active .calculator .title .toggle-container .toggle-btn label {
+  background: #d1cccc;
+}
+
+.active .calculator .input-container {
+  color: #35352c;
+  background: white;
+}
+
+.active .calculator .buttons-container {
+  background: #d1cccc;
+}
+
+.active .calculator .buttons-container .buttons .del, .active .calculator .buttons-container .buttons .reset {
+  background: #377f86;
+  border: #1b5f65;
+}
+
+@media (max-width: 376px) {
+  .container .calculator .title {
+    margin: 55px 0 25px;
+  }
+  .container .calculator .title .calc {
+    font-size: 35px;
+  }
+  .container .calculator .title .toggle-container .toggle-btn span {
+    margin-bottom: 3px;
+  }
+  .container .calculator .input-container {
+    width: 325px;
+    height: 70px;
+  }
+  .container .calculator .buttons-container .buttons {
+    -ms-grid-columns: [start] 60px [line1] 60px [line2] 60px [line3] 60px [end];
+        grid-template-columns: [start] 60px [line1] 60px [line2] 60px [line3] 60px [end];
+    -ms-grid-rows: [start] 75px [row1] 75px [row2] 75px [row3] 75px [row4] 75px [end];
+        grid-template-rows: [start] 75px [row1] 75px [row2] 75px [row3] 75px [row4] 75px [end];
+    gap: 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
