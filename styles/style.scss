@@ -194,13 +194,13 @@ input {
         }
       }
       .input-container {
-        width: 285px;
+        width: 325px;
         height: 70px;
       }
       .buttons-container {
         .buttons {
             display: grid;
-          grid-template-columns: [start] 50px [line1] 50px [line2] 50px [line3] 50px [end];
+          grid-template-columns: [start] 60px [line1] 60px [line2] 60px [line3] 60px [end];
           grid-template-rows: [start] 75px [row1] 75px [row2] 75px [row3] 75px [row4] 75px [end];
           gap: 15px;
         }
