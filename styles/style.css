@@ -239,7 +239,7 @@ input {
 
 @media (max-width: 376px) {
   .container .calculator .title {
-    margin: 55px 0 25px;
+    margin: 10px 0 25px;
   }
   .container .calculator .title .calc {
     font-size: 35px;
