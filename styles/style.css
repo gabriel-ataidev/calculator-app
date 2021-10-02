@@ -248,14 +248,14 @@ input {
     margin-bottom: 3px;
   }
   .container .calculator .input-container {
-    width: 285px;
+    width: 325px;
     height: 70px;
   }
   .container .calculator .buttons-container .buttons {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: [start] 50px [line1] 50px [line2] 50px [line3] 50px [end];
-        grid-template-columns: [start] 50px [line1] 50px [line2] 50px [line3] 50px [end];
+    -ms-grid-columns: [start] 60px [line1] 60px [line2] 60px [line3] 60px [end];
+        grid-template-columns: [start] 60px [line1] 60px [line2] 60px [line3] 60px [end];
     -ms-grid-rows: [start] 75px [row1] 75px [row2] 75px [row3] 75px [row4] 75px [end];
         grid-template-rows: [start] 75px [row1] 75px [row2] 75px [row3] 75px [row4] 75px [end];
     gap: 15px;
